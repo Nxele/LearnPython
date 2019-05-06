@@ -105,6 +105,8 @@ print("Nduduzo" not in Ay) #return true because Nduduzo ls not in Array (sequenc
 
 print("Python collection Array")
 
+#A list is a collection which is ordered and changeable. In Python lists are written with square brackets.
+
 thislist = ["apple", "banana", "cherry"]
 print(thislist[1]) #print array value at index 1
 
@@ -205,3 +207,7 @@ car = [
 
 car.sort(reverse=False,key=myFunA)
 print(car)
+
+#A tuple is a collection which is ordered and unchangeable. In Python tuples are written with round brackets.
+thistuple = ("apple", "banana", "cherry")
+print(thistuple)
