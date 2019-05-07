@@ -211,3 +211,93 @@ print(car)
 #A tuple is a collection which is ordered and unchangeable. In Python tuples are written with round brackets.
 thistuple = ("apple", "banana", "cherry")
 print(thistuple)
+
+#you can also use the tuple constructort to create a tuple
+newtuple = tuple(("Apple","Dell","HP","MSI"))
+print(newtuple)
+#on a tuple you can not add or remove data
+
+#A set is a collection which is unordered and unindexed. In Python sets are written with curly brackets.
+thisset = {"Sizwe","Lebo","Mxo"}
+print(thisset)
+
+for index in thisset:
+  print(index)
+
+#on set we also use add() to add new data but once added data can't be removed
+thisset.add("Gugu")
+print(thisset)
+
+#to add multiple data you use update
+thisset.update(["Mino","Sisa","Aya"])
+print(thisset)
+
+#to remove data we use remove() and discard()
+thisset.remove("Aya")
+thisset.discard("Gugu")
+
+#also pop is used to remove data since set are not unsordted you won't know which was deleted
+
+deleted =  thisset.pop()
+print(deleted)
+
+#to clear all data in inside the set set.claer()
+thisset.clear()
+
+# del thisset() to delete the set
+#also use set to create thisset = set(("Nxle","Nxumalo","Nxala"))
+
+#A dictionary is a collection which is unordered, changeable and indexed. In Python dictionaries are written with curly brackets, and they have keys and values.
+
+thisdiction = {"Brand":"BMW","Model":"//M3","Year":"2013"}
+print(thisdiction)
+
+#to access values inside dictionaries you use the key
+print(thisdiction["Brand"])
+
+#also you can use the get() method
+print(thisdiction.get("Model"))
+
+#to change the value upu specify the key name
+thisdiction["Year"] = "1998"
+print(thisdiction)
+
+#this for loop print keys only
+for index in thisdiction:
+  print(index)
+
+#to display values
+for index in thisdiction:
+  print(thisdiction[index])
+
+#or specify values like:
+for index in thisdiction.values():
+  print(index)
+
+#to loop through both value and key you use item
+for x,y in thisdiction.items():
+  print(x,y)
+
+#Adding an item to the dictionary is done by using a new index key and assigning a value to it:
+thisdiction["Color"] = "Silver grey"
+print(thisdiction)
+
+#The pop() method removes the item with the specified key name:
+thisdiction.pop("Model")
+
+#The popitem() method removes the last inserted item (in versions before 3.7, a random item is removed instead):
+thisdiction.popitem()
+
+#delete item
+del thisdiction["Year"]
+
+# clear() to remove all data
+
+#It is also possible to use the dict() constructor to make a new dictionary:
+newdiction = dict(Model="",Year=2013,color="Grey")
+
+#to copy we copy() and 
+
+mydict = thisdiction.copy()
+#or
+mydict = dict(thisdiction)
