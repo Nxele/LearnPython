@@ -301,3 +301,24 @@ newdiction = dict(Model="",Year=2013,color="Grey")
 mydict = thisdiction.copy()
 #or
 mydict = dict(thisdiction)
+
+#if | elif statements
+print("enter a random number")
+num = input()
+num = int(num)
+
+if(num > 0 and num <10):
+  print("Entered number is lessthen 10")
+elif(num > 10 and num <20):
+  print("entered number is greater than 10")
+else:
+  print("number is greater than 20")
+
+#short hand if is when you have one if you run it in one line
+
+if(num > 50): print("Enter number is greater than 50")
+
+#short hand if else
+AA = 7
+BB = 15
+print("A class") if(AA < BB) else print("B class") 
