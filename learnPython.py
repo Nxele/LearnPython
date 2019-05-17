@@ -105,7 +105,7 @@ print("Nduduzo" not in Ay) #return true because Nduduzo ls not in Array (sequenc
 
 print("Python collection Array")
 
-#A list is a collection which is ordered and changeable. In Python lists are written with square brackets.
+#A [[list]] is a collection which is ordered and changeable. In Python lists are written with square brackets.
 
 thislist = ["apple", "banana", "cherry"]
 print(thislist[1]) #print array value at index 1
@@ -208,7 +208,7 @@ car = [
 car.sort(reverse=False,key=myFunA)
 print(car)
 
-#A tuple is a collection which is ordered and unchangeable. In Python tuples are written with round brackets.
+#A ((tuple)) is a collection which is ordered and unchangeable. In Python tuples are written with round brackets.
 thistuple = ("apple", "banana", "cherry")
 print(thistuple)
 
@@ -322,3 +322,56 @@ if(num > 50): print("Enter number is greater than 50")
 AA = 7
 BB = 15
 print("A class") if(AA < BB) else print("B class") 
+
+#LOOPS Python have two primitive loop commands which are while (loop) and for (loop)
+
+#while loop
+#with the while loop we can execute as long as the statement condition is TRUE
+
+i = 1
+while(i < 10):
+      print(i," ALL NUM")
+      i += 1
+
+#using break
+iA = 1
+while(iA < 7):
+      print(iA," STOP @ 5")
+      if(iA==5):
+            break #can break the while loop b4 looging all items when you found what you are looking for
+      iA +=1
+
+#using continue
+iE = 1
+while iE < 5:
+      iE += 1
+      if iE == 3:
+            continue
+      print(iE, " SKIP 3 & continue")
+
+#THE RANGE FUNCTION IN FOR LOOP
+
+for x in range(10):  #print range from zero to specified number
+      print(x, "RANGE FROM 0 TO 10")
+
+for x in range(2,5): #print range from start to end specified number default increment by 1
+      print(x," Range from 2 To 5")
+
+for x in range(5,25,5): #print using specified increment and start and end point (start,end,increment)
+      print(x," Increment by 5 start-5 end 25")
+#Nested Loops
+adj = ["Red","Big","Tasty"]
+fruit = ["Apple","Banana","Cherry"]
+
+for x in adj:
+      for y in fruit:
+            print(x,y)
+            
+
+
+
+
+
+  
+
+
