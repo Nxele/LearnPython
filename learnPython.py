@@ -366,7 +366,84 @@ fruit = ["Apple","Banana","Cherry"]
 for x in adj:
       for y in fruit:
             print(x,y)
-            
+
+#Python functions also knowns as methods     
+def my_function(): #creating a function
+      print("I LOVE PROGRAMMINg (code killer)")
+
+my_function() #calling my function
+
+#information can be passed to a function as parameters 
+
+def people_name(name):
+      print(name+" Nxele")
+
+people_name("Sizwe");
+people_name("Mxolisi")
+people_name("Gugu")
+
+#use defaul parameter when parameter is not passed
+def my_country(country = "South Africa"):
+      print("I AM from :"+country)
+
+my_country("Zimbabwe")
+my_country()
+my_country("Nigaria")
+
+#return a value
+
+def say_name(name):
+      return name
+print(say_name("Sizwe Nduduzo Nxele"))
+
+#Recursion in python means calling a function within functions
+
+def tri_recursion(k):
+      if(k>0):
+            result = k+tri_recursion(k-1)
+            print(result)
+      else:
+            result = 0
+      return result
+tri_recursion(6)
+
+#Lambda expression in python
+#A lambda function can take any number of arguments, but can only have one expression.
+xXx = lambda a : a + 10
+print(xXx(5))
+
+#a lambda expression that takes two numbers 
+v = lambda a,b: a * b
+print(v(5,5))
+
+# a lamba expression that sums up three number
+s = lambda f,t,e: f + t + e
+print(s(5,10,11))
+
+#Use that function definition to make a function that always doubles the number you send in:
+def myfunc(n):
+      return lambda a : a * n
+
+mydoubler = myfunc(2) #specifies that the passed number must be doubled
+mytrippler = myfunc(3) #specifies that the passed number must be tripled
+
+print(mydoubler(11)) #the passed number
+print(mytrippler(5)) #the passsed number
+
+#classes in Python
+class human:
+      Name = "Sizwe"
+      Surname = "Nxele"
+      Age = 24
+      Country = "South Africa"
+      Occupation = "GIS Developer"
+print(human)
+
+
+
+
+
+
 
 
 
