@@ -1,4 +1,4 @@
-print("Displaying Data from variables")
+"""print("Displaying Data from variables")
 name = "sizwe"
 surname = "Nxele"
 Age = 24
@@ -9,10 +9,10 @@ if( 5 > 2):
     print('Five is greater than Two')
 if(2 < 5):
     print('Two is less than Five')
-#This is a comment is python
+#This is a comment is python """
 
 """ Docstring this is used to comment a block of code in python"""
-print("getting viriable data type")
+"""print("getting viriable data type")
 
 x = "Sizwe" #String
 y = 'Nxele' #String
@@ -490,24 +490,60 @@ person_me = myFav(car,animal,country,job)
 person_me.diplayFav();
 
 #this method is for change class values using objects
-print("welcome to settings please enter number for the item your to change  1. Car 2. Animal 3. Country 4. job ")
+print("welcome to settings please enter number for the item your to change  1. Car 2. Animal 3. Country 4.job 5. for not making changies ")
 change_selected = input()
 change_selected = int(change_selected)
 if change_selected == 1:
       print("Enter your new favourite car")
       car = input() #change car value
-elif change_selected ==2:
+elif change_selected == 2:
       print("Enter your new favourite Animal")
       animal = input()
-elif change_selected ==3:
+elif change_selected == 3:
       print("Enter your new favourite country")
       country = input()
-else:
+elif change_selected == 4:
       print("Enter your new job title")
       job = input()
-
+elif change_selected == 5:
+      print("Profile not updated")
+else:
+      print("No changes made to your profile")
 person_me = myFav(car,animal,country,job)
-person_me.diplayFav();
+person_me.diplayFav();"""
+
+#python inheritance
+#parent class
+class person: #this is a base class
+      def __init__(self,name,surname,age):
+            self.name = name
+            self.surname = surname
+            self.age = age
+      def display(me):
+            if me.age < 18:
+                  print(me.name,me.surname,me.age," Teenage")
+            else:
+                  print(me.name,me.surname,me.age, "Adult")
+
+person_obj = person("Sizwe","Nxele",24)
+person_obj.display()
+
+#child class
+"""class student(person): #student class(child class) extend person class(base class)
+      pass #pass is for passing all the class objects
+#now student have all the base class objects
+student_obj = student("Nduduzo","Nxele",25)
+student_obj.display()"""
+
+class student(person):
+      def __init__(self,name,surname,age,year): #overrides parent class data
+            person.__init__(self,name,surname,age) #to keep the parent class data
+            self.graduationyear = year #adding new attributes to the child class
+      def welcome(self):
+            print("Welcome ",self.name," your graduated was on the ",self.graduationyear)
+student_obj = student("Nduduzo","Nxele",25,2016)
+student_obj.display()
+print(student_obj.welcome()) #display what's on the child class
 
 
 
