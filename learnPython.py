@@ -447,13 +447,14 @@ person.show_person() #calling a method inside using class object
 
 person.name = "Nduduzo" #you can modify person object data
 
-del person.country #you can delete person property
+#del person.country #you can delete person property
 
-del person #you can also delete the object
+#del person #you can also delete the object
 
 person.show_person() #calling person again after deleting data
 
-"""class carLove:
+#class example
+class carLove:
       def __init__(bmw,model,year,color):
             bmw.model = model
             bmw.year = year
@@ -463,7 +464,50 @@ person.show_person() #calling person again after deleting data
             print(cars.model,cars.year,cars.color)
 
 mycar = carLove("BMW //M3",2013,"silver")
-mycar.printCars()"""
+mycar.printCars()
+
+#another class example
+
+class myFav:
+      def __init__(fav,car,animal,country,job):
+            fav.car = car
+            fav.animal = animal
+            fav.country = country
+            fav.job = job
+
+      def diplayFav(me):
+            print(me.car,me.animal,me.country,me.job)
+print("what is your favourite car")
+car = input()
+print("what is your favourite animal")
+animal = input()
+print("what is your favourite country")
+country = input()
+print("what is your favourite job title")
+job = input()
+
+person_me = myFav(car,animal,country,job)
+person_me.diplayFav();
+
+#this method is for change class values using objects
+print("welcome to settings please enter number for the item your to change  1. Car 2. Animal 3. Country 4. job ")
+change_selected = input()
+change_selected = int(change_selected)
+if change_selected == 1:
+      print("Enter your new favourite car")
+      car = input() #change car value
+elif change_selected ==2:
+      print("Enter your new favourite Animal")
+      animal = input()
+elif change_selected ==3:
+      print("Enter your new favourite country")
+      country = input()
+else:
+      print("Enter your new job title")
+      job = input()
+
+person_me = myFav(car,animal,country,job)
+person_me.diplayFav();
 
 
 
