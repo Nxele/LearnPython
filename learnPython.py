@@ -346,7 +346,7 @@ iE = 1
 while iE < 5:
       iE += 1
       if iE == 3:
-            continue
+            continue #at index 3 we are saying skip number 3
       print(iE, " SKIP 3 & continue")
 
 #THE RANGE FUNCTION IN FOR LOOP
@@ -431,24 +431,39 @@ print(mydoubler(11)) #the passed number
 print(mytrippler(5)) #the passsed number
 
 #classes in Python
-class human:
-      Name = "Sizwe"
-      Surname = "Nxele"
-      Age = 24
-      Country = "South Africa"
-      Occupation = "GIS Developer"
-print(human)
+class human: #creating a class called human
+      def __init__(self,name,surname,age,counrty,occupation): #creating a constructor
+            self.name = name #assign value to the class blue print or object
+            self.surname = surname
+            self.age = age
+            self.country = counrty
+            self.occupation = occupation
 
+      def show_person(self):
+            print(self.name,self.surname,self.age,self.country,self.occupation)
 
+person = human("Sizwe","Nxele",24,"South Africa","Developer") #creating an object for a parameterised constructor
+person.show_person() #calling a method inside using class object
 
+person.name = "Nduduzo" #you can modify person object data
 
+del person.country #you can delete person property
 
+del person #you can also delete the object
 
+person.show_person() #calling person again after deleting data
 
+"""class carLove:
+      def __init__(bmw,model,year,color):
+            bmw.model = model
+            bmw.year = year
+            bmw.color = color
 
+      def printCars(cars):
+            print(cars.model,cars.year,cars.color)
 
+mycar = carLove("BMW //M3",2013,"silver")
+mycar.printCars()"""
 
-
-  
 
 
