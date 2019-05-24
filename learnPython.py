@@ -542,8 +542,47 @@ class student(person):
       def welcome(self):
             print("Welcome ",self.name," your graduated was on the ",self.graduationyear)
 student_obj = student("Nduduzo","Nxele",25,2016)
-student_obj.display()
+#student_obj.display()
 print(student_obj.welcome()) #display what's on the child class
 
+#Pyhton iterator An iterator is an object that contains a countable number of values.
+#An iterator is an object that can be iterated upon, meaning that you can traverse through all the values.
 
+myTuple = ["Apple","Banana","Orange"]
+theFruit = iter(myTuple) #converting my tuple to a iter so i can loop through all iterations 
 
+print(next(theFruit))
+print(next(theFruit))
+print(next(theFruit))
+
+#even strings are iterable through all it characters
+
+myfruit = "Banana"
+myIter = iter(myfruit)
+
+numArray = len(myfruit)
+
+while numArray > 0: #using while loop
+      print(next(myIter))
+      numArray -= 1
+
+for x in myfruit: #using for loop
+      print(x)
+
+class numbers:
+      def __iter__(self):
+            self.a = 1
+            return self
+      def __next__(self):
+            if self.a <= 20:
+                  x = self.a
+                  self.a +=1
+                  return x
+            else:
+                  raise StopIteration
+
+myclass = numbers()
+iters = iter(myclass)
+
+for d in iters:
+      print(d)
